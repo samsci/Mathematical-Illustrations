@@ -1,0 +1,32 @@
+%!
+
+gsave
+
+72 72 scale
+1 72 div setlinewidth
+4 5 translate
+
+newpath
+0 0 moveto
+1 0 lineto
+stroke
+
+0 0 1 0 360 arc
+closepath
+stroke
+
+1 0 1 0 360 arc
+closepath
+stroke
+
+newpath
+0 0 moveto
+0.5 0.85 lineto
+stroke
+
+newpath
+1 0 moveto
+0.5 0.85 lineto
+stroke
+
+showpage

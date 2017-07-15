@@ -1,0 +1,40 @@
+%!
+%% A poscript file for drawing Proposition 1.1 from Euclid's Elements
+
+gsave
+
+%% Start the file by scaling from pixels to Inches, set the line width, and translate the origin to the center of the page
+72 72 scale
+1 72 div setlinewidth
+4 5 translate
+
+%% It is required to construct an equilateral triangle on the straight line AB. We start by creating the line
+newpath
+0 0 moveto
+1 0 lineto
+stroke
+
+%% Our first line becomes the radius of our circles needed to draw an equalitarial triangle. We draw two cirles with the center at
+%% end points of the first line
+0 0 1 0 360 arc
+closepath
+stroke
+
+1 0 1 0 360 arc
+closepath
+stroke
+
+%% From our endpoints, we draw a line extending to the top intersection of the circle:
+newpath
+0 0 moveto
+0.5 0.85 lineto
+stroke
+
+%% Repeat the above step for the second endpoint:
+newpath
+1 0 moveto
+0.5 0.85 lineto
+stroke
+
+%% For our file to be read by GIMP, Inkscape, or any PDF reader, we need to end it with the command showpage
+showpage
